@@ -1,0 +1,38 @@
+mat-card {
+    margin-left: auto;
+    margin-right: auto;
+}
+button {
+    margin: 8px 16px;
+}
+input {
+    letter-spacing: 0.25em;
+}
+.calculator {
+    max-width: 390px;
+}
+.solution {
+    width: 50px;
+}
+.expression {
+    width: 200px;
+}
+.completeExpression {
+    display: flex;
+    justify-content: flex-start;
+}
+.display {
+    height: 15px;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+.title {
+    padding-left: 16px;
+}
+.error {
+    font-size: 11px;
+    color: rgba(255, 64, 129);
+    margin-left: 16px;
+}

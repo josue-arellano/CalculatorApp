@@ -1,0 +1,44 @@
+<div class="body">
+    <mat-card class="calculator">
+        <div class="title">
+            <h3>Basic Calculator</h3>
+        </div>
+        <div class="completeExpression">
+            <mat-card class="expression display">
+                <h5>{{ expressionString.value }}</h5>            
+            </mat-card>
+            <h5>=</h5>
+            <mat-card class="solution display">
+                <h5>{{ solutionString.value }}</h5>
+            </mat-card>
+        </div>
+        <div *ngIf="wrongSyntax" class="error">*Must be in the form: 3 + 4 * 5</div>
+        <div *ngIf="dividingByZero" class="error">*Can't divide by 0.</div>
+        <div class="buttons">
+            <div class="row">
+                <button mat-raised-button (click)="updateExpression('1')">1</button>
+                <button mat-raised-button (click)="updateExpression('2')">2</button>
+                <button mat-raised-button (click)="updateExpression('3')">3</button>
+                <button mat-raised-button (click)="updateExpression(' * ')" color="primary">*</button>
+            </div>
+            <div class="row">
+                <button mat-raised-button (click)="updateExpression('4')">4</button>
+                <button mat-raised-button (click)="updateExpression('5')">5</button>
+                <button mat-raised-button (click)="updateExpression('6')">6</button>
+                <button mat-raised-button (click)="updateExpression(' / ')" color="primary">/</button>
+            </div>
+            <div class="row">
+                <button mat-raised-button (click)="updateExpression('7')">7</button>
+                <button mat-raised-button (click)="updateExpression('8')">8</button>
+                <button mat-raised-button (click)="updateExpression('9')">9</button>
+                <button mat-raised-button (click)="updateExpression(' + ')" color="primary">+</button>
+            </div>
+            <div class="row">
+                <button mat-raised-button (click)="clear()">C</button>
+                <button mat-raised-button (click)="updateExpression('0')">0</button>
+                <button mat-raised-button (click)="checkExpression()" color="accent">=</button>
+                <button mat-raised-button (click)="updateExpression(' - ')" color="primary">-</button>
+            </div>
+        </div>
+    </mat-card>
+</div>
